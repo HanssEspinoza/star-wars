@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FilmsComponent } from './pages';
+import { FilmComponent, FilmsComponent } from './pages';
 
 const routes: Routes = [
   {
     path: '',
     component: FilmsComponent
+  },
+  {
+    path: ':id',
+    component: FilmComponent
   }
 ];
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { People } from 'src/app/core';
 
 import { PeopleService } from '../../services';
 
@@ -9,21 +10,27 @@ import { PeopleService } from '../../services';
   styleUrls: ['./one-people.component.scss']
 })
 export class OnePeopleComponent {
+  public onePeople?: People;
 
   constructor(
     private peopleService:PeopleService,
-    private activatedRoute:ActivatedRoute
+    private activatedRoute:ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
     let id: any;
     const persona = this.activatedRoute.params.subscribe(params => id = params['id']);
-    
+
     this.getOnePeople(id);
   }
 
   getOnePeople(id: any) {
-    this.peopleService.getOnePeople(id).subscribe()
+    this.peopleService.getOnePeople(id).subscribe(
+      (resp: People) => {
+        this.onePeople = resp;
+        console.log(this.onePeople);
+      }
+    )
   }
 
 }
