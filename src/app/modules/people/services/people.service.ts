@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ApiService, People } from '../../../core';
+import { AllPeople, ApiService, People } from '../../../core';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,7 +9,7 @@ export class PeopleService {
 
   constructor(private apiService:ApiService) { }
 
-  getPeople():Observable<People[]> {
+  getPeople():Observable<AllPeople> {
     return this.apiService.getAll('people');
   }
 

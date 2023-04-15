@@ -15,7 +15,7 @@ export class NavbarComponent {
   constructor() {
     this.menu = [
       {
-        name: 'Inicio',
+        name: 'Home',
         url: '/'
       },
       {

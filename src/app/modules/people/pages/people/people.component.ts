@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
-import { People } from 'src/app/core';
+import { AllPeople } from 'src/app/core';
 import { PeopleService } from '../../services';
+
 
 @Component({
   selector: 'app-people',
   templateUrl: './people.component.html',
   styleUrls: ['./people.component.scss']
 })
+
 export class PeopleComponent implements OnInit {
+  public allPeople?: AllPeople;
+  public idPeople: string[] = [];
 
   constructor(private peopleService:PeopleService) {}
-  public people: People[] = [];
 
   ngOnInit(): void {
     this.getPeople();
@@ -19,8 +22,9 @@ export class PeopleComponent implements OnInit {
 
   getPeople() {
     this.peopleService.getPeople().subscribe(
-      (resp: People[]) => {
-        this.people = resp;
+      (resp: AllPeople) => {
+        this.allPeople = resp;
+        this.idPeople = resp.results.map(url => url.url.split('/')[5]);
       }
     )
   }
