@@ -28,7 +28,6 @@ export class OnePeopleComponent {
     this.peopleService.getOnePeople(id).subscribe(
       (resp: People) => {
         this.onePeople = resp;
-        console.log(this.onePeople);
       }
     )
   }

@@ -1,1 +1,74 @@
-<p>one-people works!</p>
+<div class="flex items-center justify-center min-h-screen">
+  <div
+    class="relative w-full group max-w-md min-w-0 mx-auto mt-6 mb-6 break-words bg-white border shadow-2xl dark:bg-teal-600 dark:border-gray-700 md:max-w-sm rounded-xl"
+  >
+    <div class="pb-6">
+      <div class="mt-2 mt-20 text-center">
+        <h3
+          class="mb-1 text-2xl font-bold leading-normal text-white "
+        >
+          {{ onePeople?.name }}
+        </h3>
+      </div>
+      <div
+        class="pt-6 mx-6 mt-6 text-center border-t border-gray-200 "
+      >
+        <div class="flex justify-center">
+          <div class="w-1/2 px-6">
+            <p class="text-white font-extrabold">Height:</p>
+            <p
+              class="mb-4 font-light leading-relaxed text-gray-300 "
+            >{{onePeople?.height}}</p>
+          </div>
+          <div class="w-1/2 px-6">
+            <p class="text-white font-extrabold">Mass:</p>
+            <p
+              class="mb-4 font-light leading-relaxed text-gray-300 "
+            >{{onePeople?.mass}}</p>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="w-1/2 px-6">
+            <p class="text-white font-extrabold">Hair Color:</p>
+            <p
+              class="mb-4 font-light leading-relaxed text-gray-300 "
+            >{{onePeople?.hair_color}}</p>
+          </div>
+          <div class="w-1/2 px-6">
+            <p class="text-white font-extrabold">Skin Color:</p>
+            <p
+              class="mb-4 font-light leading-relaxed text-gray-300 "
+            >{{onePeople?.skin_color}}</p>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="w-1/2 px-6">
+            <p class="text-white font-extrabold">Eye Color:</p>
+            <p
+              class="mb-4 font-light leading-relaxed text-gray-300 "
+            >{{onePeople?.eye_color}}</p>
+          </div>
+          <div class="w-1/2 px-6">
+            <p class="text-white font-extrabold">Birth Year:</p>
+            <p
+              class="mb-4 font-light leading-relaxed text-gray-300 "
+            >{{onePeople?.birth_year}}</p>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="w-1/2 px-6">
+            <p class="text-white font-extrabold">Gender:</p>
+            <p
+              class="mb-4 font-light leading-relaxed text-gray-300 "
+            >{{onePeople?.gender}}</p>
+          </div>
+          <div class="w-1/2 px-6">
+            <p class="text-white font-extrabold">Home World:</p>
+            <p
+              class="mb-4 font-light leading-relaxed text-gray-300 "
+            >{{onePeople?.homeworld}}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
