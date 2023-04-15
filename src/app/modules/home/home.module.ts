@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components';
-import { NavbarComponent } from 'src/app/core';
+import { NavbarComponent, SpinnerComponent } from 'src/app/core';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { NavbarComponent } from 'src/app/core';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    NavbarComponent
+    NavbarComponent,
+    SpinnerComponent
   ]
 })
 export class HomeModule { }
