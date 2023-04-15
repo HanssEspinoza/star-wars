@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { People } from 'src/app/core';
 
 import { PeopleService } from '../../services';
@@ -15,6 +15,7 @@ export class OnePeopleComponent {
   constructor(
     private peopleService:PeopleService,
     private activatedRoute:ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -30,6 +31,10 @@ export class OnePeopleComponent {
         this.onePeople = resp;
       }
     )
+  }
+
+  goBack() {
+    this.router.navigateByUrl('/people');
   }
 
 }
