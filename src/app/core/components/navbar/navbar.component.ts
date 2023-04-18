@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Menu } from '../../models';
 import { RouterModule } from '@angular/router';
@@ -9,10 +9,10 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
   public menu: Menu[] = [];
 
-  constructor() {
+  ngOnInit(): void {
     this.menu = [
       {
         name: 'Home',

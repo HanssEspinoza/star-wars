@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SpinnerService } from '../../services';
 
@@ -10,8 +10,7 @@ import { SpinnerService } from '../../services';
   styleUrls: ['./spinner.compoent.scss']
 })
 export class SpinnerComponent {
+  private spinnerService = inject(SpinnerService);
+
   isLoading$ = this.spinnerService.isLoading$;
-
-  constructor(private spinnerService: SpinnerService) {}
-
 }

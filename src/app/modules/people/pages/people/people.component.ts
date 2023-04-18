@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { AllPeople } from 'src/app/core';
 import { PeopleService } from '../../services';
@@ -14,7 +14,7 @@ export class PeopleComponent implements OnInit {
   public allPeople?: AllPeople;
   public idPeople: string[] = [];
 
-  constructor(private peopleService:PeopleService) {}
+  private peopleService = inject(PeopleService);
 
   ngOnInit(): void {
     this.getPeople();
