@@ -20,11 +20,11 @@ export class NavbarComponent implements OnInit{
       },
       {
         name: 'People',
-        url: '/people'
+        url: '/app/people'
       },
       {
         name: 'Films',
-        url: '/films'
+        url: '/app/films'
       },
     ]
   }
