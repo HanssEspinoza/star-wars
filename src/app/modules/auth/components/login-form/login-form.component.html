@@ -4,15 +4,14 @@
     <div class="relative">
       <input
         #nameInput
-        formControlName="email"
-        placeholder="Ingrese email"
-        type="email"
+        formControlName="username"
+        placeholder="Ingrese usuario"
+        type="text"
         class="w-full rounded bg-gray-100 border-gray-300 border-2"
       >
     </div>
-    <div *ngIf="email?.touched && email?.invalid">
-      <p *ngIf="email?.hasError('required')" class="font-medium text-red-500 text-xs mt-1 ml-1">Este campo es obligatorio</p>
-      <p *ngIf="email?.hasError('email')" class="font-medium text-red-500 text-xs mt-1 ml-1">Este campo debe ser un email</p>
+    <div *ngIf="username?.touched && username?.invalid">
+      <p *ngIf="username?.hasError('required')" class="font-medium text-red-500 text-xs mt-1 ml-1">Este campo es obligatorio</p>
     </div>
   </div>
   <div>
