@@ -24,4 +24,12 @@ export class AuthService {
     );
   }
 
+  signOut() {
+    setTimeout(async () => {
+      this.localStorageService.reoveItem('token');
+      this.localStorageService.reoveItem('username');
+      this.router.navigateByUrl('/');
+    }, 2000)
+  }
+
 }
